@@ -1,0 +1,43 @@
+{
+  "name": "dbothook",
+  "version": "2.0.3",
+  "description": "Discord bot list poster and stats retriever",
+  "main": "./src/index",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbots-pkg/dbothook.js.git"
+  },
+  "scripts": {
+    "eslint": "eslint ./src",
+    "eslint:fix": "eslint ./src --fix",
+    "gpr-setup": "node scripts/gpr.js",
+    "gpr-publish": "npm run gpr-setup && npm login --registry=https://npm.pkg.github.com --scope=@dbots-pkg && npm publish",
+    "tslint": "tslint ./typings/*.d.ts",
+    "tslint:fix": "tslint ./typings/*.d.ts --fix",
+    "prepublishOnly": "npm run eslint:fix && npm run tslint:fix"
+  },
+  "keywords": [
+    "api",
+    "discord",
+    "discordapp",
+    "discord bots",
+    "discord bot",
+    "webhook",
+    "webserver"
+  ],
+  "author": "Snazzah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dbots-pkg/dbothook.js/issues"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "eventemitter3": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.1.8",
+    "eslint": "^6.5.1",
+    "tslint": "^6.0.0",
+    "typescript": "^3.8.3"
+  }
+}

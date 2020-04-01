@@ -1,6 +1,6 @@
 {
   "name": "dbothook",
-  "version": "2.0.3",
+  "version": "1.0.0",
   "description": "Discord bot list poster and stats retriever",
   "main": "./src/index",
   "repository": {

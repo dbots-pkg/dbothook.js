@@ -1,3 +1,6 @@
+import { Express, Request } from 'express'
+import * as http from 'http'
+
 /**
  * A key that a service uses to identify itself. Available services:
  * * arcanebotcenter

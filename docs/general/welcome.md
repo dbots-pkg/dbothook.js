@@ -1,6 +1,6 @@
 <div align="center">
   <p>
-    <img src="static/logo.png" alt="dbothook.js logo" width="200" />
+    <img src="/dbothook-website/static/logo.png" alt="dbothook.js logo" width="200" />
   </p>
   <p>A webhook receiver for all botlists.</p>
   <p>

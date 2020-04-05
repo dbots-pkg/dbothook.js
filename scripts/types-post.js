@@ -3,14 +3,18 @@ const { join: path } = require('path');
 
 const replaceMap = {
   'declare': 'export',
-  'eventHandler = \\(result: any \\| object\\[\\]\\) => void': 
+  'eventHandler = \\(result: any \\| object\\[\\]\\) => void':
     'eventHandler = (result: object | object[]) => void'
 };
+const imports = `
+import { Express, Request } from 'express'
+import * as http from 'http'
+`.trim() + '\n\n';
 
 const typesPath = path(__dirname, '../typings/index.d.ts');
 const originalTypes = fs.readFileSync(typesPath, { encoding: 'utf8' });
 
-var docs = originalTypes;
+var docs = imports + originalTypes;
 
 for (const key in replaceMap) {
   const regex = new RegExp(key, 'g');

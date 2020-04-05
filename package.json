@@ -37,6 +37,7 @@
     "url": "https://github.com/dbots-pkg/dbothook.js/issues"
   },
   "dependencies": {
+    "@types/express": "^4.17.4",
     "express": "^4.17.1",
     "eventemitter3": "^4.0.0"
   },

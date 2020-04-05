@@ -11,7 +11,7 @@ const fs = require('fs');
 class DBotHook extends EventEmitter {
   constructor(options = {}) {
     super();
-    if (typeof options !== 'object') 
+    if (typeof options !== 'object')
       throw new Error('The options are not in an object.');
 
     /**
@@ -97,7 +97,7 @@ module.exports = DBotHook;
 /**
  * An object that includes authorization secrets for all botlists.
  * Each key can either have a secret or be `true` to accept *all* requests regardless of authorization.
- * 
+ *
  * Note: `arcanebotcenter` and `botlistspace` gives you a secret instead of setting one.
  * @typedef {Object.<ServiceKey, string|boolean>} AuthorizationSecrets
  */

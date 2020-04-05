@@ -50,6 +50,10 @@ export interface HookOptions {
 /**
  * A generic event object.
  * @typedef {Object} Event
+ *
+ * These properties need to be synched with RichEvent and ErrorEvent.
+ * There is no JSDoc way of extending typdefs that compiles into an extended interface in TS
+ * or that is correctly read as an extension by the docs website.
  * @property {ServiceKey} list The service endpoint this event occured in
  * @property {Request} request The request that emitted this event
  */
@@ -62,7 +66,11 @@ export interface Event {
  * An event object that is returned and parsed at the end of an endpoint call.
  * See the README.md of dbothook.js to see which service returns what values.
  * @typedef {Object} RichEvent
- * @extends Event
+ *
+ * These properties are from the Event typedef:
+ * @property {ServiceKey} list The service endpoint this event occured in
+ * @property {Request} request The request that emitted this event
+ *
  * @property {Object} data The raw data that the service posted
  * @property {number} timestamp The time when this event was emitted
  * @property {RichEventType} type The type of event
@@ -74,6 +82,8 @@ export interface Event {
  * @property {string} [discriminator] The user's discriminator (i.e. `#0001`)
  */
 export interface RichEvent {
+    list: ServiceKey
+    request: Request
     data: any
     timestamp: number
     type: RichEventType
@@ -87,10 +97,16 @@ export interface RichEvent {
 /**
  * A event emitted after an error.
  * @typedef {Object} ErrorEvent
- * @extends Event
+ *
+ * These properties are from the Event typedef:
+ * @property {ServiceKey} list The service endpoint this event occured in
+ * @property {Request} request The request that emitted this event
+ *
  * @property {Error} error The error that occurred
  */
 export interface ErrorEvent {
+    list: ServiceKey
+    request: Request
     error: Error
 }
 

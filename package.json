@@ -8,12 +8,18 @@
     "url": "git+https://github.com/dbots-pkg/dbothook.js.git"
   },
   "scripts": {
+    "docgen": "docgen --source src --custom docs/index.yml --output docs/docs.json --jsdoc docs/docgen.json && npm run docgen:post",
+    "docgen:post": "node scripts/docgen-post.js",
+    "docs": "node scripts/docs.js && npm run docgen",
     "eslint": "eslint ./src",
     "eslint:fix": "eslint ./src --fix",
     "gpr-setup": "node scripts/gpr.js",
     "gpr-publish": "npm run gpr-setup && npm login --registry=https://npm.pkg.github.com --scope=@dbots-pkg && npm publish",
+    "tsd-jsdoc": "jsdoc -c ./typings/jsdoc.json -r src",
     "tslint": "tslint ./typings/*.d.ts",
     "tslint:fix": "tslint ./typings/*.d.ts --fix",
+    "types": "npm run tsd-jsdoc && mv out/types.d.ts typings/index.d.ts && rm out --dir && npm run types:post",
+    "types:post": "node scripts/types-post.js && npm run tslint:fix",
     "prepublishOnly": "npm run eslint:fix && npm run tslint:fix"
   },
   "keywords": [
@@ -36,7 +42,11 @@
   },
   "devDependencies": {
     "@types/node": "^13.1.8",
+    "discord.js-docgen": "github:discordjs/docgen",
+    "dtslint": "^3.4.1",
     "eslint": "^6.5.1",
+    "jsdoc-typeof-plugin": "^1.0.0",
+    "tsd-jsdoc": "^2.4.0",
     "tslint": "^6.0.0",
     "typescript": "^3.8.3"
   }

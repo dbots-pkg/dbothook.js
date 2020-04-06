@@ -1,12 +1,9 @@
 const fs = require('fs');
 const { join: path } = require('path');
 
-// TODO: replace future website URLs
 // #region Update docs/general/welcome.md to track README.md
 const README = fs.readFileSync(path(__dirname, '../README.md'), { encoding: 'utf8' })
-  // This is necessary until the website has its own .js.org domain
-  .replace(new RegExp('src="static', 'g'), 'src="/dbothook-website/static');
-// .replace(/https:\/\/dbots\.js\.org\/#([\w/]+)/, '#$1');
+  .replace(/https:\/\/dbothook\.js\.org\/#([\w/]+)/, '#$1');
 fs.writeFileSync(path(__dirname, '../docs/general/welcome.md'), README);
 // #endregion
 

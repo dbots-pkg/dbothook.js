@@ -1,10 +1,12 @@
 const fs = require('fs');
 const { join: path } = require('path');
 
+// TypeScript-only types need to be replaced with JSDoc types
 const replaceMap = {
   // Replace TS Record<> type with regular Object.<>
   'Record': 'Object',
-  'NodeJS.Timeout': 'Interval'
+  'NodeJS.Timeout': 'Interval',
+  'http.Server': 'Server'
 };
 
 const docsPath = path(__dirname, '../docs/docs.json');

@@ -34,7 +34,7 @@ class DBotHook extends EventEmitter {
 
     /**
      * The server created from {@link #listen}
-     * @type {?http.Server}
+     * @type {Server}
      */
     this.server = null;
   }

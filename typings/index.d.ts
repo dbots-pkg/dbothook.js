@@ -129,9 +129,9 @@ export class DBotHook {
     app: Express
     /**
      * The server created from {@link #listen}
-     * @type {?http.Server}
+     * @type {Server}
      */
-    server: http.Server
+    server: Server
     /**
      * Loads endpoints into the application
      * @param {string} [prefix='/'] The prefix to add before the path (which would be the {@link ServiceKey})

@@ -44,7 +44,7 @@
     "@types/node": "^12.12.53",
     "discord.js-docgen": "github:discordjs/docgen",
     "dtslint": "^3.4.1",
-    "eslint": "^6.5.1",
+    "eslint": "^7.5.0",
     "jsdoc-typeof-plugin": "^1.0.0",
     "tsd-jsdoc": "^2.4.0",
     "tslint": "^6.0.0",

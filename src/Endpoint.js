@@ -21,7 +21,7 @@ class Endpoint {
   }
 
   createRoute() {
-    this.router.post('/', (request, response) => {
+    this.router.post('/', (request, response) => { // lgtm [js/missing-rate-limiting]
       try {
         /**
          * Emitted when any request is recieved.

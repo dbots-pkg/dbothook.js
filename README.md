@@ -7,8 +7,10 @@
     <a href="https://www.npmjs.com/package/dbothook"><img src="https://img.shields.io/npm/v/dbothook.svg?maxAge=3600" alt="NPM version" /></a>
     <a href="https://www.npmjs.com/package/dbothook"><img src="https://img.shields.io/npm/dt/dbothook.svg?maxAge=3600" alt="NPM downloads" /></a>
     <a href="https://david-dm.org/dbots-pkg/dbothook.js"><img src="https://img.shields.io/david/dbots-pkg/dbothook.js.svg?maxAge=3600" alt="Dependencies" /></a>
+    <a href="https://lgtm.com/projects/g/dbots-pkg/dbothook.js/context:javascript"><img src="https://img.shields.io/lgtm/grade/javascript/github/dbots-pkg/dbothook.js.svg?label=Code%20quality" alt="LGTM Code Quality" /></a>
     <br/>
     <a href="https://github.com/dbots-pkg/dbothook.js/actions?query=workflow%3A%22Source+code+linting%22"><img src="https://github.com/dbots-pkg/dbothook.js/workflows/Source%20code%20linting/badge.svg" alt="Linting state" /></a>
+    <a href="https://github.com/dbots-pkg/dbothook.js/actions?query=workflow%3A%22TS+definitions%22"><img src="https://github.com/dbots-pkg/dbothook.js/workflows/TS%20definitions/badge.svg" alt="Typings state" /></a>
   </p>
   <p>
     <a href="https://nodei.co/npm/dbothook/"><img src="https://nodei.co/npm/dbothook.png" alt="NPM info" /></a>

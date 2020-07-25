@@ -2,16 +2,16 @@ name: Deployment
 on:
   push:
     branches:
-      - "*"
-      - "!docs"
+      - '*'
+      - '!docs'
     paths:
-      - "src/**"
-      - "docs/**"
-      - ".github/workflows/deployment.yml"
-      - "scripts/docs.js"
-      - "scripts/post-docgen.js"
-      - "package.json"
-      - "README.md"
+      - 'src/**'
+      - 'docs/**'
+      - '.github/workflows/deployment.yml'
+      - 'scripts/docs.js'
+      - 'scripts/post-docgen.js'
+      - 'package.json'
+      - 'README.md'
 
 jobs:
   docs:
@@ -41,4 +41,4 @@ jobs:
         uses: EndBug/add-and-commit@v4
         with:
           add: docs/*.md
-          message: "[auto] Update docs"
+          message: '[auto] docs: update docs'

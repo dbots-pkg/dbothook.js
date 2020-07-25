@@ -2,14 +2,14 @@ name: TS definitions
 on:
   push:
     branches:
-      - "*"
-      - "!docs"
+      - '*'
+      - '!docs'
     paths:
-      - "src/**"
-      - "typings/**"
+      - 'src/**'
+      - 'typings/**'
       - package.json
       - scripts/post-types.js
-      - ".github/workflows/typings.yml"
+      - '.github/workflows/typings.yml'
 
 jobs:
   types:
@@ -34,6 +34,6 @@ jobs:
         uses: EndBug/add-and-commit@v4
         with:
           add: typings
-          message: "[auto] Update typings"
+          message: '[auto] docs: update typings'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

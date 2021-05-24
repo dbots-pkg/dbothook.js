@@ -93,6 +93,10 @@ export interface ErrorEvent {
     error: Error
 }
 
+/**
+ * A class that posts server count to listing site(s).
+ * @param [options] - The options needed to construct the hook
+ */
 export class DBotHook {
     constructor(options?: HookOptions);
     /**
